@@ -1,0 +1,12 @@
+{% extends "base.html" %}
+
+{%block content%}
+<form action="{%url 'productos:formulario'%}" method='post'>
+
+    {% csrf_token %}
+    {{form}}
+
+    <input class="btn btn-primary" type="submit" value="enviar">
+</form>
+
+{%endblock%}
